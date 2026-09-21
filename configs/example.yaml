@@ -1,0 +1,15 @@
+# Replace the video and polygons with a calibration for your fixed camera.
+# Paths are relative to this YAML file; source: 0 opens the first camera.
+source: ../datasets/parking.mp4
+detector:
+  weights: yolo11n.pt
+  confidence: 0.25
+  classes: [2, 3, 5, 7]  # COCO car, motorcycle, bus, truck
+  device: cpu
+occupancy_threshold: 0.3
+log_level: INFO
+spots:
+  - id: A1
+    polygon: [[20, 20], [140, 20], [140, 180], [20, 180]]
+  - id: A2
+    polygon: [[160, 20], [280, 20], [280, 180], [160, 180]]

@@ -1,3 +1,1 @@
-"""
-Пакет ParkEye для обнаружения свободных парковочных мест
-""" 
+"""Local parking vision proof of concept."""

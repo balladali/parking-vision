@@ -65,4 +65,10 @@ desktop.ini
 *.png
 
 # Кэш opencv
-.opencv-cache/ 
+.opencv-cache/
+
+.pytest_cache/
+*.jsonl
+datasets/*
+!datasets/.gitkeep
+Ultralytics/
