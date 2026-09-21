@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parking-vision"
+version = "0.1.0"
+description = "Local fixed-camera parking occupancy PoC"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy>=1.26,<3",
+  "opencv-python>=4.10,<5",
+  "ultralytics>=8.3,<9",
+  "PyYAML>=6.0.2,<7",
+  "pydantic>=2.9,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<10"]
+
+[project.scripts]
+parking-vision = "parking_vision.cli:main"
+
+[tool.setuptools]
+package-dir = {parking_vision = "src"}
+packages = ["parking_vision", "parking_vision.detection", "parking_vision.occupancy", "parking_vision.video", "parking_vision.models"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

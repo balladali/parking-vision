@@ -1,0 +1,10 @@
+.git
+.venv
+legacy
+datasets
+tests
+__pycache__
+*.egg-info
+*.pt
+*.jsonl
+.pytest_cache
